@@ -1,2 +1,1 @@
-# dicoding-projects
-Belajar Dasar Pemrograman Web (Final Project)
+https://dawn-o.github.io/dicoding-projects/
