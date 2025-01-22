@@ -495,17 +495,30 @@ td img {
   margin-top: 30px;
   border-radius: 15px;
   overflow: hidden;
+  position: relative;
+}
+
+.glossary-image::after {
+  content: "Learn More About Crypto";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .glossary-image img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.glossary-image img:hover {
   transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .footer {
@@ -585,17 +598,9 @@ td img {
   color: #fff;
   opacity: 0.8;
 }
-@media screen and (max-width: 768px) {
-}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .education-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .market-stats {
     grid-template-columns: 1fr;
   }
 }
@@ -617,6 +622,12 @@ td img {
 
   .section-title {
     padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .market-stats {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -651,7 +662,7 @@ td img {
   header,
   main {
     padding: 0 5%;
-  }
+  } 
 
   .content h1 {
     font-size: 70px;
@@ -772,6 +783,13 @@ td img {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .glossary-image::after {
+    font-size: 16px;
+    padding: 15px;
   }
 }
 
