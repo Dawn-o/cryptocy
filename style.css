@@ -674,7 +674,7 @@ td img {
   .mobile-nav ul {
     display: flex;
     align-self: start;
-    flex-direction: co  lumn;
+    flex-direction: column;
     gap: 20px;
   }
 
@@ -745,16 +745,6 @@ td img {
   .coin-list {
     flex-direction: column;
     gap: 10px;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav .btn {
-    margin-top: 10px;
   }
 
   .coin {
