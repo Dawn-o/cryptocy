@@ -14,6 +14,8 @@ html {
 
 body {
   background-color: #0f002b;
+  margin: 0;
+  padding-top: 30px; 
 }
 
 .container {
@@ -209,7 +211,7 @@ nav .social-link {
 }
 
 .hero-section {
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .cta-content {
