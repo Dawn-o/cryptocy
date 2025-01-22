@@ -782,6 +782,7 @@ td img {
     padding: 15px 20px;
     margin: 5px 0;
     display: flex;
+    text-align: right;
     justify-content: space-between;
     align-items: center;
   }
