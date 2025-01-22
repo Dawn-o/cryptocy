@@ -169,11 +169,6 @@ nav h1 a {
   margin-right: 10px;
 }
 
-.logo {
-  width: 50px;
-  cursor: pointer;
-}
-
 nav ul {
   flex: 1;
 }
