@@ -66,7 +66,16 @@ window.addEventListener('resize', function() {
     }
 });
 
+// CODE FOR MOBILE NAVIGATION LINKS TO CLOSE NAVIGATION ON CLICK
 document.querySelectorAll('.mobile-nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.hamburger').classList.remove('active');
+        document.querySelector('.mobile-nav').classList.remove('active');
+        document.querySelector('.overlay').classList.remove('active');
+    });
+});
+
+document.querySelectorAll('.mobile-nav h2 a').forEach(link => {
     link.addEventListener('click', () => {
         document.querySelector('.hamburger').classList.remove('active');
         document.querySelector('.mobile-nav').classList.remove('active');
