@@ -204,7 +204,7 @@ nav .social-link {
 }
 
 .hero-section {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .cta-content {
@@ -662,7 +662,7 @@ td img {
   header,
   main {
     padding: 0 5%;
-  } 
+  }
 
   .content h1 {
     font-size: 70px;
