@@ -15,7 +15,7 @@ html {
 body {
   background-color: #0f002b;
   margin: 0;
-  padding-top: 30px; 
+  padding-top: 30px;
 }
 
 .container {
@@ -237,7 +237,8 @@ nav .social-link {
   background: #ff960b;
   color: #fff;
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 13px 30px;
+  font-weight: 500;
   border-radius: 30px;
 }
 
