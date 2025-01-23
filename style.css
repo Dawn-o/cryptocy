@@ -118,31 +118,6 @@ header {
   color: #ff960b;
 }
 
-.mobile-nav-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  bottom: 0;
-  padding: 20px;
-  position: absolute;
-  width: 100%;
-}
-
-.mobile-nav-footer .social-links {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-.mobile-nav-footer img {
-  filter: brightness(0) invert(1);
-  height: 24px;
-  transition: opacity 0.3s ease;
-  width: 24px;
-}
-
-.mobile-nav-footer img:hover {
-  opacity: 0.8;
-}
-
 .mobile-nav.active {
   left: 0;
 }
@@ -783,7 +758,7 @@ td img {
     padding: 15px 20px;
     margin: 5px 0;
     display: flex;
-    text-align: right;
+    text-align: end;
     justify-content: space-between;
     align-items: center;
   }
