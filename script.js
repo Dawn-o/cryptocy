@@ -1,3 +1,4 @@
+// FORMAT PRICE FUNCTION
 function formatPrice(price) {
     return new Intl.NumberFormat('en-US', {
         style: 'decimal',
@@ -6,6 +7,7 @@ function formatPrice(price) {
     }).format(price);
 }
 
+// FETCH PRICES FROM COINGECKO API
 function updatePrices() {
     const priceElements = {
         bitcoin: document.querySelectorAll('[id^="bitcoin"]'),
