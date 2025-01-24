@@ -17,6 +17,49 @@ function formatPercentage(num) {
     return num.toFixed(2) + '%';
 }
 
+function updateGlobalStats() {
+    const globalElements = {
+        marketCap: document.getElementById('global-mcap'),
+        marketCapChange: document.getElementById('global-mcap-change'),
+        volume: document.getElementById('global-volume'),
+        btcDominance: document.getElementById('btc-dominance')
+    };
+
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: "https://api.coingecko.com/api/v3/global",
+        method: "GET",
+        headers: {}
+    };
+
+    // Set loading state
+    Object.values(globalElements).forEach(el => {
+        if (el) el.innerHTML = "Loading...";
+    });
+
+    $.ajax(settings)
+        .done(function (response) {
+            const data = response.data;
+
+            if (globalElements.marketCap) {
+                globalElements.marketCap.innerHTML = '$' + formatLargeNumber(data.total_market_cap.usd);
+            }
+            if (globalElements.marketCapChange) {
+                const change = formatPercentage(data.market_cap_change_percentage_24h_usd);
+                globalElements.marketCapChange.innerHTML = change;
+                globalElements.marketCapChange.classList.remove('positive', 'negative');
+                globalElements.marketCapChange.classList.add(data.market_cap_change_percentage_24h_usd > 0 ? 'positive' : 'negative');
+            }
+        })
+        .fail(function (error) {
+            console.error("Failed to fetch global stats:", error);
+            Object.values(globalElements).forEach(el => {
+                if (el) el.innerHTML = "Error";
+            });
+        });
+}
+
 function updatePrices() {
     const coinElements = {
         bitcoin: {
@@ -87,6 +130,8 @@ function updatePrices() {
 
 updatePrices();
 setInterval(updatePrices, 30000);
+updateGlobalStats();
+setInterval(updateGlobalStats, 30000);
 
 
 // CODE FOR MOBILE NAVIGATION
