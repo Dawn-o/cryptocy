@@ -129,10 +129,7 @@ function updatePrices() {
 }
 
 updatePrices();
-setInterval(updatePrices, 30000);
 updateGlobalStats();
-setInterval(updateGlobalStats, 30000);
-
 
 // CODE FOR MOBILE NAVIGATION
 document.querySelector('.hamburger').addEventListener('click', function () {
