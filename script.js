@@ -51,6 +51,12 @@ function updateGlobalStats() {
                 globalElements.marketCapChange.classList.remove('positive', 'negative');
                 globalElements.marketCapChange.classList.add(data.market_cap_change_percentage_24h_usd > 0 ? 'positive' : 'negative');
             }
+            if (globalElements.volume) {
+                globalElements.volume.innerHTML = '$' + formatLargeNumber(data.total_volume.usd);
+            }
+            if (globalElements.btcDominance) {
+                globalElements.btcDominance.innerHTML = formatPercentage(data.market_cap_percentage.btc);
+            }
         })
         .fail(function (error) {
             console.error("Failed to fetch global stats:", error);
