@@ -125,14 +125,14 @@
                 </div>
               </div>
 
-              <div class="crypto-table">
-                <table>
+              <div class="coin-table">
+                <table aria-label="Cryptocurrency Market Data">
                   <thead>
                     <tr>
-                      <th>Coin</th>
-                      <th>Price</th>
-                      <th>24h Change</th>
-                      <th>Market Cap</th>
+                      <th scope="col">Coin</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">24h Change</th>
+                      <th scope="col">Market Cap</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -141,27 +141,27 @@
                         <img src="assets/images/bitcoin.png" alt="BTC" />
                         Bitcoin (BTC)
                       </td>
-                      <td>$ <span id="bitcoin"></span></td>
-                      <td class="positive">+2.4%</td>
-                      <td>$1.2T</td>
+                      <td>$<span id="bitcoin-price"></span></td>
+                      <td><span data-coin="bitcoin-change"></span></td>
+                      <td>$<span data-coin="bitcoin-mcap"></span></td>
                     </tr>
                     <tr>
                       <td>
                         <img src="assets/images/ethereum.png" alt="ETH" />
                         Ethereum (ETH)
                       </td>
-                      <td>$ <span id="ethereum"></span></td>
-                      <td class="negative">-1.2%</td>
-                      <td>$389B</td>
+                      <td>$<span id="ethereum-price"></span></td>
+                      <td><span data-coin="ethereum-change"></span></td>
+                      <td>$<span data-coin="ethereum-mcap"></span></td>
                     </tr>
                     <tr>
                       <td>
                         <img src="assets/images/dogecoin.png" alt="DOGE" />
                         Dogecoin (DOGE)
                       </td>
-                      <td>$ <span id="dogecoin"></span></td>
-                      <td class="positive">+5.8%</td>
-                      <td>$18.9B</td>
+                      <td>$<span id="dogecoin-price"></span></td>
+                      <td><span data-coin="dogecoin-change"></span></td>
+                      <td>$<span data-coin="dogecoin-mcap"></span></td>
                     </tr>
                   </tbody>
                 </table>
