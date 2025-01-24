@@ -355,8 +355,13 @@ nav .social-link {
 .positive {
   color: #00ff88;
 }
+
 .negative {
-  color: #ff4646;
+  color: #ff3838;
+}
+
+[data-coin$="-change"] {
+  font-weight: 500;
 }
 
 .crypto-table {
